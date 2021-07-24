@@ -1,0 +1,76 @@
+<nav>
+    <div class="container-fluid">
+        <div class="container d-flex justify-content-between align-items-start">
+            <div class="logo">
+                <img src="../../../assets/logo.svg" alt="" [routerLink]="['/home']" routerLinkActive="router-link-active" >
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="search-menu">
+                <button class="btn p-0 me-4 fw-medium fw-500 text-white" (click)="openSearch()">
+                    Our Products & Services
+                    <i class="bi bi-search ms-2"></i>
+                </button>
+            </div>
+            <button class="btn btn-menu" (click)="openNav()">
+                <span uk-icon="menu"></span>
+            </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!-- menu -->
+<div id="mySidebar" class="sidebar" [ngClass]="{'w-100': sideNav == true}">
+    <a href="javascript:void(0)" class="closebtn" (click)="openNav()">×</a>
+    <a [routerLink]="['/']" routerLinkActive="router-link-active" (click)="openNav()">Home</a>
+    <a [routerLink]="['/about']" routerLinkActive="router-link-active" (click)="openNav()">About</a>
+    <a [routerLink]="['/service']" routerLinkActive="router-link-active" (click)="openNav()">Service</a>
+    <a [routerLink]="['/blog']" routerLinkActive="router-link-active" (click)="openNav()">Blog</a>
+    <a [routerLink]="['/contact']" routerLinkActive="router-link-active" (click)="openNav()">Contact</a>
+</div>
+<!-- menu -->
+
+
+<div id="search" class="search-box" [ngClass]="{'h-100': searchBox == true}">
+    <a href="javascript:void(0)" class="closebtn" (click)="openSearch()">×</a>
+    <div class="search-bar">
+        <input type="text" [(ngModel)]="searchInput" placeholder="Search">
+        <i class="bi bi-search ms-2"></i>
+    </div>
+    <div class="search-result" *ngIf="searchInput != '' ">
+        <label class="text-light mb-2" for="">Search result</label>
+        <ul class="list-group list-group-flush mt-0">
+            <li class="list-group-item px-0">
+                An item
+                <button class="btn"><i class="bi bi-x"></i></button>
+            </li>
+        </ul>
+    </div>
+    <div class="search-result">
+        <label class="text-light mb-2" for="">Recent</label>
+        <ul class="list-group list-group-flush mt-0">
+            <li class="list-group-item px-0">
+                An item
+                <button class="btn"><i class="bi bi-x"></i></button>
+            </li>
+            <li class="list-group-item px-0">
+                A second item
+                <button class="btn"><i class="bi bi-x"></i></button>
+            </li>
+            <li class="list-group-item px-0">
+                A third item
+                <button class="btn"><i class="bi bi-x"></i></button>
+            </li>
+            <li class="list-group-item px-0">
+                A fourth item
+                <button class="btn"><i class="bi bi-x"></i></button>
+            </li>
+            <li class="list-group-item px-0">
+                And a fifth one
+                <button class="btn"><i class="bi bi-x"></i></button>
+            </li>
+        </ul>
+        
+    </div>
+</div>

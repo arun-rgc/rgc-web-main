@@ -1,0 +1,196 @@
+nav{
+    z-index: 99;
+    padding: 20px 0px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.logo{
+    width: 180px;
+    
+}
+.btn-menu{
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+}
+
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.818);
+    backdrop-filter: blur(50px);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sidebar a {
+    padding: 0px 0px 4px 0px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #595959;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 2px solid #fff0;
+  }
+  
+  .sidebar a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    border: none !important;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    color: color(dark);
+    background: #0000;
+    border: none;
+    margin-right: 15px;
+  }
+  
+  .openbtn:hover {
+    background-color: color(gray-100);
+  }
+  
+  #main {
+    padding: 16px;
+  }
+  
+  .search-box{
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.818);
+    backdrop-filter: blur(50px);
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+      border: none !important;
+    }
+    a {
+      padding: 0px 0px 4px 0px;
+      margin-bottom: 20px;
+      text-decoration: none;
+      font-size: 24px;
+      color: #595959;
+      display: block;
+      transition: 0.3s;
+      border-bottom: 2px solid #fff0;
+      &:hover{
+        color: #fff;
+        border-bottom: 2px solid #fff;
+      }
+    }
+    .search-bar{
+      margin-top: 100px;
+      height: auto;
+      max-width: 700px;
+      width: 100%;
+      position: relative;
+      input{
+        padding: 10px;
+        min-width: 100%;
+        background: #0000;
+        border: none !important;
+        border-bottom: 1px solid #444444 !important;
+        outline: none !important;
+        color: rgb(224, 224, 224);
+        &:focus{
+          border-bottom: 1px solid #b4b4b4 !important;
+        }
+      }
+      i{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: #444444;
+      }
+    }
+  }
+  .search-result{
+    margin-top: 50px;
+    max-width: 700px;
+    width: 100%;
+    .list-group-item{
+      font-size: 13px;
+      width: 100%;
+      background-color: #fff0;
+      color: #999999;
+      border: none !important;
+      border-bottom: 1px solid #303030 !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button{
+        padding: 0;
+        color: #999999 !important;
+      }
+    }
+  }
+
+  @media(max-width:800px){
+    .search-result{
+      max-width: 500px !important;
+    }
+    .search-bar{
+      max-width: 500px !important;
+    }
+  }
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+  @media(max-width:600px){
+    .search-result{
+      max-width: 300px !important;
+    }
+    .search-bar{
+      max-width: 300px !important;
+    }
+  }
+
+
+  @media(max-width:375px){
+    .search-result{
+      max-width: 250px !important;
+    }
+    .search-bar{
+      max-width: 250px !important;
+    }
+  }

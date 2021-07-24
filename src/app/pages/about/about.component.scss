@@ -1,0 +1,20 @@
+.system{
+    min-height: 100vh;
+    background: #53bb69;
+    position: relative;
+    .content{
+        z-index: 10;
+        width:  550px;
+        h1{
+            font-family: 'Open Sans', sans-serif;
+            color: #fff;
+            font-size: 39px;
+        }
+        h4{
+            color: #fff;
+        }
+    }  
+}
+.shaped-img{
+    max-width: 300px;
+}

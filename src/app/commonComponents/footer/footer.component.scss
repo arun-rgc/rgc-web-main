@@ -1,0 +1,32 @@
+.footer{
+    &__title{
+        font-weight:600;
+        position: relative;
+        margin-bottom: 30px;
+        display: block;
+        width: fit-content;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: #1e5fc1;
+            bottom: -10px;
+            left: 0px;
+        }
+    }
+    &__link{
+        .nav-link{
+            color: #000;
+            font-size: 14px;
+            padding: 5px 0px;
+        }
+    }
+    padding: 80px 0px;
+    background: #f1f5f8;
+}
+.footer-credits{
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;
+}
